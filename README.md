@@ -11,4 +11,4 @@ Ejecutar pruebas de unidad de forma continua --watch:
 npm test
 
 Ejecutar pruebas de unidad solo una vez:
-npm run test-once
+npm run test-once 
