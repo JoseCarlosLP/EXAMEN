@@ -1,5 +1,6 @@
 function calculadorCambio(montoVenta, efectivo) {
-  return efectivo-montoVenta;
+  let cambio = efectivo-montoVenta;
+  return cambio.toFixed(1);
 }
 
 export default calculadorCambio;
