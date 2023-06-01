@@ -12,4 +12,8 @@ describe("Calculador de cantidad minima de monedas para cambio", () => {
   it("Se espera recibir una unica moneda de cambio en enteros", () => {
     expect(calculadorMonedasMinimas(calculadorCambio(2,3))).toEqual("[1]");
   });
+  it("Se espera recibir mas de dos monedas de cambio", () => {
+    expect(calculadorMonedasMinimas(calculadorCambio(2,8))).toEqual("[5,1]");
+    expect(calculadorMonedasMinimas(calculadorCambio(1,20))).toEqual("[5,5,5,2,2]");
+  });
 });
