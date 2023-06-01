@@ -1,9 +1,9 @@
-describe("Sumador", () => {
-  it("Shows the amount of the addition to the user", () => {
+describe("Calculador de Cambios", () => {
+  it("Muestra el cambio que deberia devoler el cajero de la tienda", () => {
     cy.visit("/");
-    cy.get("#primer-numero").type(4);
-    cy.get("#segundo-numero").type(5);
-    cy.get("#sumar-button").click();
-    cy.get("#resultado-div").should("contain", "9");
+    cy.get("#monto_venta").type(55);
+    cy.get("#efectivo").type(100);
+    cy.get("#calcular-button").click();
+    cy.get("#resultado-div").should("contain", "El cambio a devolver es:45");
   });
 });

@@ -1,15 +1,15 @@
-import sumar from "./sumador";
+import calculadorCambio  from "./calculadorCambio";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const montoVenta = document.querySelector("#monto_venta");
+const efectivo = document.querySelector("#efectivo");
+const form = document.querySelector("#tienda-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const precio = Number.parseInt(montoVenta.value);
+  const pagado = Number.parseInt(efectivo.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>El cambio a devolver es:<b>" + calculadorCambio(precio, pagado) + "</b></p>";
 });
