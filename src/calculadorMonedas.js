@@ -1,4 +1,5 @@
 export function calculadorMonedasMinimas(cambio)
 {
-  return "[]";
+    if(cambio==0) return "[]";
+    return "["+cambio+"]";
 }
